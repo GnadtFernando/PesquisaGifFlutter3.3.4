@@ -23,12 +23,12 @@ class _HomePageState extends State<HomePage> {
     if (_search.isEmpty) {
       response = await http.get(
         Uri.parse(
-            'https://api.giphy.com/v1/gifs/trending?api_key=aCW6poMeOl1tTlrDGbeadtgCpaxs1ff3&limit=20&rating=g'),
+            'https://api.giphy.com/v1/gifs/trending?api_key=Your_Key&limit=20&rating=g'),
       );
     } else {
       response = await http.get(
         Uri.parse(
-            'https://api.giphy.com/v1/gifs/search?api_key=aCW6poMeOl1tTlrDGbeadtgCpaxs1ff3&q=$_search&limit=19&offset=$_offset&rating=g&lang=en'),
+            'https://api.giphy.com/v1/gifs/search?api_key=Your_Key=$_search&limit=19&offset=$_offset&rating=g&lang=en'),
       );
     }
     return json.decode(response.body);
